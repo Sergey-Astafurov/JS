@@ -17,3 +17,4 @@ celsInFahr(gradusInCels)
 const name = 'Sergey'
 const admin = name
 console.log(admin);
+console.log(true + true);
