@@ -10,25 +10,25 @@
 // Задание 2
 // Перепишите код к тернарному оператору
 
-let test = true;
-const result = test === true ? console.log('+++') : console.log('---')
-console.log(result);
+// let test = true;
+// const result = test === true ? console.log('+++') : console.log('---')
+// console.log(result);
 
-// Задание 3
-// В переменной day лежит какое-то число из интервала от 1 до 31. Определите в какую декаду месяца попадает это число (в первую, вторую или третью).
-let day = 21;
+// // Задание 3
+// // В переменной day лежит какое-то число из интервала от 1 до 31. Определите в какую декаду месяца попадает это число (в первую, вторую или третью).
+// let day = 21;
 
-if (day > 0 && day <= 10) {
-    console.log("1 Decada");
-}
-else if (day > 10 && day <= 20) {
-    console.log("2 Decada");
-}
-else if (day >= 21 && day <= 31) {
-    console.log("3 Decada");
-} else {
-    console.log("ERROR");
-}
+// if (day > 0 && day <= 10) {
+//     console.log("1 Decada");
+// }
+// else if (day > 10 && day <= 20) {
+//     console.log("2 Decada");
+// }
+// else if (day >= 21 && day <= 31) {
+//     console.log("3 Decada");
+// } else {
+//     console.log("ERROR");
+// }
 
 
 
@@ -39,22 +39,22 @@ else if (day >= 21 && day <= 31) {
 // Необходимо от пользователя получить число.
 // Необходимо вывести разряды числа, а именно: количество сотен, десятков и единиц.
 
-const num = +prompt('Num?')
+// const num = +prompt('Num?')
 
-const digitsOfNumber = (n) => {
-    let numb = n;
+// const digitsOfNumber = (n) => {
+//     let numb = n;
 
-    if (n > 999) {
-        n = n % 1000
+//     if (n > 999) {
+//         n = n % 1000
 
 
-    }
-    const hundreds = parseInt(n / 100)
-    const ten = parseInt(n % 100 / 10)
-    const unit = n % 10
-    return console.log(`В числе ${numb} количество сотен: ${hundreds}, десятков: ${ten}, единиц: ${unit}`);
-}
-digitsOfNumber(num)
+//     }
+//     const hundreds = parseInt(n / 100)
+//     const ten = parseInt(n % 100 / 10)
+//     const unit = n % 10
+//     return console.log(`В числе ${numb} количество сотен: ${hundreds}, десятков: ${ten}, единиц: ${unit}`);
+// }
+// digitsOfNumber(num)
 
 
 // Пример:

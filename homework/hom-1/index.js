@@ -5,16 +5,21 @@
 // Вывести в консоль температуру в Цельсиях и Фаренгейтах.
 
 
-let gradusInCels = 10;
-const celsInFahr = (celsius) => {
-    const result = (9 / 5) * celsius + 32
-    return console.log(`${result} F`)
-}
-celsInFahr(gradusInCels)
+// let gradusInCels = 10;
+// const celsInFahr = (celsius) => {
+//     console.log(`${(9 / 5) * celsius + 32} F`)
+// }
+// celsInFahr(gradusInCels)
 // Задание 2
 // Необходимо создать переменную name, записать в эту переменную свое имя. Необходимо также создать переменную admin и присвоить этой переменной значение из переменной name. Вывести значение переменной admin в консоль. -->
 
-const name = 'Sergey'
-const admin = name
-console.log(admin);
-console.log(true + true);
+
+const arr = [1, 2, 3, 4]
+for (let i = arr.length - 1; i > 0; i--) {
+    console.log(arr[i]);
+}
+
+// const name = 'Sergey'
+// const admin = name
+// console.log(admin);
+// console.log(true + true);
