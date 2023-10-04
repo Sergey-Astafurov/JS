@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+//         const loadData = (url)=>{
+//     let xhr = new XMLHttpRequest();
+//     xhr.open('GET', url,true)
+//     xhr.onreadystatechange = function () {
+//     // if (xhr.readyState === 4 && xhr.status === 200) {
+//     //     console.log(xhr.responseText);
+//     // }
+//     xhr.onload = function(){
+//         if (xhr.status === 200) {
+//         console.log(xhr.responseText);
+//     }
+//     }
+// };
+// xhr.send()
+// }
+
+//     const loadData = (url)=>{
+//         fetch(url).then((res)=>{
+//            return res.ok ? res.json() : false
+//         }).then((res)=>{console.log(res);
+
+//         }).catch(error=>{
+//             console.log(error);
+//         })
+//     }
+
+
+
+// async function loadData(url){
+//     try {
+//         const res = await fetch(url);
+//         if(res.ok){
+//             const arr = await res.json();
+//             arr.sort((a,b)=>{
+//                 return a.name.localeCompare(b.name)
+//             })
+//             console.log(arr);
+//         }
+
+
+//     } catch (error) {
+//         console.log(error);
+//     }
+// }
+
+// loadData('https://jsonplaceholder.typicode.com/users')
+
+
+async function getUserData(id) {
+  try {
+    const response = await fetch(`https://reqres.in/api/users/${id}`);
+    if (response.ok) {
+        console.log(await response.json());
+    }
+  } catch {
+    (error) => console.log(error);
+  }
+}
+getUserData(1);
+getUserData(3);
+
+
+
+    </script>
+</body>
+</html>
