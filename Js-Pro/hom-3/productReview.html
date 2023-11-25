@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="review.js" defer></script>
+    <script src="functions.js"defer></script>
+    <title>Оставить отзыв о продукте</title>
+</head>
+<body>
+    <style>
+        .warn{
+            font-size: 20px;
+            color: red;
+            font-family: sans-serif;
+        }
+    </style>
+    <form action="" class="form__review">
+        <label class="form__review-name" for="name-product" >Название продукта</label>
+        <input type="text" id="name-product" class="name-prod">
+        <label class="form__review-text" for="text-review">Отзыв о  продукте</label>
+        <textarea name="text-review" id="text-review" class="text-review" cols="40" rows="10"></textarea>
+        <button  class="btn-review">Добавить  отзыв </button>
+    </form>
+    <div class="warn"></div>
+</body>
+</html>
