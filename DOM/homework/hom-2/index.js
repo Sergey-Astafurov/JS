@@ -3,44 +3,41 @@ const SECRET_KEY = 'XcrUmYIGj5RdmF3EbMVwv4P15mc46QswuV0W20dTgVs'
 const divEl = document.querySelector('.div')
 let state = []
 
+const blokImg = document.querySelector('.bloc-image');
+const img = document.querySelector('.img')
+const namePhoto = document.querySelector('.name-photo')
+const btnLike = document.querySelector('.btn-like');
+
 
 
 const fetchPhotos = async () => {
-    state = []
-    const url = `https://api.unsplash.com/photos/random/?client_id=${ACCESS_KEY}&count=3`;
-    const response = await fetch(url)
+    const url = `https://api.unsplash.com/photos/random/?client_id=${ACCESS_KEY}`;
+    const response = await fetch(url);
     const data = await response.json()
     if (response.ok) {
-
         state = data
-        console.log(data);
-        renderIt()
+        createImg()
     }
+
 }
-fetchPhotos()
+// fetchPhotos()
 
-const renderIt = () => {
-    return state.map(({ urls: { regular } }) => {
-        const img = document.createElement('img')
-        img.src = regular
-        divEl.appendChild(img)
-
-    }).join('')
+function createImg() {
+    img.src = state.urls.full
+    namePhoto.textContent = state.user.name
+    btnLike.textContent = state.likes
 }
 
 
-function checkPosition() {
-    const height = document.body.offsetHeight
-    const screenHeight = window.innerHeight
-    console.log(height, screenHeight);
-    const scrolled = window.scrollY
-    console.log(scrolled);
-    const threshold = height - screenHeight / 4
-    const position = scrolled + screenHeight
-    if (position >= threshold) {
-        fetchPhotos()
+
+btnLike.addEventListener('click', ()=>{
+    count = btnLike.textContent
+    btnLike.classList.toggle('active')
+    if(btnLike.classList.contains('active') ){
+        btnLike.textContent = count++;
+    }else{
+        btnLike.textContent = count--
     }
-}
-window.addEventListener('scroll', checkPosition)
-window.addEventListener('resize', checkPosition)
+})
+
 
